@@ -21,7 +21,7 @@ use Http\Client\Common\HttpMethodsClient;
 use Http\Client\Common\Plugin\AddHostPlugin;
 use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 use Http\Client\Common\Plugin\HistoryPlugin;
-use Http\Client\HttpClient;
+use Psr\Http\Client\ClientInterface;
 use Http\Discovery\UriFactoryDiscovery;
 
 /**
@@ -113,11 +113,11 @@ class Client
     /**
      * Create a Gitlab\Client using an HttpClient.
      *
-     * @param HttpClient $httpClient
+     * @param ClientInterface $httpClient
      *
      * @return Client
      */
-    public static function createWithHttpClient(HttpClient $httpClient)
+    public static function createWithHttpClient(ClientInterface $httpClient)
     {
         $builder = new Builder($httpClient);
 

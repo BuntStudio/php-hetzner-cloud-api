@@ -7,7 +7,7 @@ namespace CedricZiel\HetznerCloudAPI\HttpClient;
 use Http\Client\Common\HttpMethodsClient;
 use Http\Client\Common\Plugin;
 use Http\Client\Common\PluginClientFactory;
-use Http\Client\HttpClient;
+use Psr\Http\Client\ClientInterface;
 use Http\Discovery\HttpClientDiscovery;
 use Http\Discovery\MessageFactoryDiscovery;
 use Http\Discovery\StreamFactoryDiscovery;
@@ -26,7 +26,7 @@ class Builder
     /**
      * The object that sends HTTP messages.
      *
-     * @var HttpClient
+     * @var ClientInterface
      */
     private $httpClient;
 
@@ -60,12 +60,12 @@ class Builder
     private $plugins = [];
 
     /**
-     * @param HttpClient     $httpClient
+     * @param ClientInterface $httpClient
      * @param RequestFactory $requestFactory
      * @param StreamFactory  $streamFactory
      */
     public function __construct(
-        ?HttpClient $httpClient = null,
+        ?ClientInterface $httpClient = null,
         ?RequestFactory $requestFactory = null,
         ?StreamFactory $streamFactory = null
     ) {
