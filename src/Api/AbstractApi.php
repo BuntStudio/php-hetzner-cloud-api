@@ -38,7 +38,7 @@ abstract class AbstractApi implements ApiInterface
      * @param Client             $client
      * @param StreamFactory|null $streamFactory
      */
-    public function __construct(Client $client, StreamFactory $streamFactory = null)
+    public function __construct(Client $client, ?StreamFactory $streamFactory = null)
     {
         $this->client = $client;
         $this->streamFactory = $streamFactory ?: StreamFactoryDiscovery::find();

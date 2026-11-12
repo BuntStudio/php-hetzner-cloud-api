@@ -53,7 +53,7 @@ class Client
      *
      * @param Builder $httpClientBuilder
      */
-    public function __construct(Builder $httpClientBuilder = null)
+    public function __construct(?Builder $httpClientBuilder = null)
     {
         $this->responseHistory = new History();
 

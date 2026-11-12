@@ -15,11 +15,11 @@
         }
     },
     "require": {
-        "php": "^7.0",
+        "php": "^7.1 || ^8.0",
         "php-http/client-common": "^1.6||^2.0",
         "php-http/discovery": "^1.2||^2.0",
         "php-http/httplug": "^1.1||^2.0",
-        "symfony/options-resolver": "^4.0||^5.0"
+        "symfony/options-resolver": "^4.0||^5.0||^6.0||^7.0"
     },
     "suggest": {
         "php-http/httplug-bundle": "For a deeper integration into Symfony"

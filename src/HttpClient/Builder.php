@@ -65,9 +65,9 @@ class Builder
      * @param StreamFactory  $streamFactory
      */
     public function __construct(
-        HttpClient $httpClient = null,
-        RequestFactory $requestFactory = null,
-        StreamFactory $streamFactory = null
+        ?HttpClient $httpClient = null,
+        ?RequestFactory $requestFactory = null,
+        ?StreamFactory $streamFactory = null
     ) {
         $this->httpClient = $httpClient ?: HttpClientDiscovery::find();
         $this->requestFactory = $requestFactory ?: MessageFactoryDiscovery::find();
